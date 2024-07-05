@@ -1,0 +1,44 @@
+import random
+option=("rock","paper","scissors")
+player_points=0
+computer_points=0
+run=True
+
+while run:
+    choice=input('''ENTER YOUR CHOICE BETWEEN:
+                    1.ROCK
+                    2.PAPER
+                    3.SCISSORS\n''').lower()
+    computer=random.choice(option) 
+
+    print(f"your choice={choice}\n")
+    print(f"computers choice={computer}\n")
+
+    if choice==computer:
+      print("its a tie")
+    elif choice=="rock" and computer=="paper":
+      computer_points+=1 
+      print("computer won")
+    elif choice=="rock" and computer=="scissors":
+      player_points+=1
+      print("you won")
+    elif choice=="paper" and computer=="rock":
+      player_points+=1
+      print("you won") 
+    elif choice=="paper" and computer=="scissors":
+      computer_points+=1
+      print("computer won")
+    elif choice=="scissors" and computer=="rock":
+      computer_points+=1
+      print("computer won")
+    elif choice=="scissors" and computer=="paper":
+      player_points+=1
+      print("you won")  
+
+    continuuation=input("DO YOU WANT TO RESUME THE GAME:(Y/N)").lower()
+    if continuuation!="y":
+    run=False
+print("SO THE FINAL SCORE IS:\n")
+print(f"YOUR POINTS={player_points}")
+print(f"COMPUTER POINTS={computer_points}")  
+print("THANK YOU FOR PLAYING")           
