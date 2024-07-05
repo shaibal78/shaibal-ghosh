@@ -1,0 +1,22 @@
+print("***********CALCULATOR***********")
+
+print('''PLEASE SELECT AN OPERATION TO PERFORM:
+      1.ADD
+      2.SUBSTRACT
+      3.MULTIPLY
+      4.DIVISION
+      ''')
+operation=int(input())
+num1=float(input("enter num1:"))
+num2=float(input("enter num2:"))
+
+if operation == 1:
+    print(f"the sum of{num1} and {num2} is: ",num1+num2)   
+elif operation == 2:
+    print(f"the substraction of{num1} and {num2} is: ",num1-num2)
+elif operation == 3:
+    print(f"the product of{num1} and {num2} is: ",num1*num2)
+elif operation == 4:
+    print(f"the division of{num1} and {num2} is: ",num1/num2)
+else:
+    print("invalid input")
